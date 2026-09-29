@@ -1,0 +1,15 @@
+import { getMeteoChantilly } from './meteo.js';
+import { getApifyData } from './apify.js';
+import { getOddsDrift } from './oddspapi.js';
+import { computeV5 } from '../src/lib/fusion-v5.js';
+
+const meteo = await getMeteoChantilly();
+const apify = await getApifyData();
+const odds = await getOddsDrift();
+const v5 = computeV5(apify, odds, meteo);
+
+console.log('METEO', meteo);
+console.log('TICKET PRINCIPAL 12 DH:', v5.principal.join('-'), '=> Phrase: Quinté+ 12 DH 5 chevaux désordre : '+v5.principal.join('-'));
+console.log('TICKET SURPRISE 12 DH:', v5.surprise.join('-'));
+console.log('OUTSIDERS:', v5.outsiders.join('-'));
+console.log('24 DH/jour - 20 jours avec 500 DH');

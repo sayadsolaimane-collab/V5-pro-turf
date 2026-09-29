@@ -1,0 +1,18 @@
+import { useState } from 'react';
+export default function Home(){
+  const wa = 'https://wa.me/212678025358?text=Salam%2C%20je%20veux%20mes%2014%20jours%20gratuits%20V5%20Turf%20Pro%20(lun-jeu)';
+  return (
+    <div style={{fontFamily:'system-ui', background:'#0a3d1f', color:'white', minHeight:'100vh', padding:20}}>
+      <h1 style={{color:'#d4af37'}}>V5 Turf Pro - 17 Quintés / 31 - 14j gratuits lun-jeu</h1>
+      <p>Apify + Oddspapi + Météo (pluie 24h, état piste, vent) - SOREC 12 DH désordre</p>
+      <a href={wa} style={{background:'#d4af37', color:'#0a3d1f', padding:'12px 20px', borderRadius:8, display:'inline-block', marginTop:12, fontWeight:'bold'}}>WhatsApp 0678025358 - Commencer 14j gratuits</a>
+      <div style={{marginTop:24, background:'white', color:'black', padding:16, borderRadius:12}}>
+        <h3>Tickets du jour (exemple Chantilly)</h3>
+        <p>Principal 12 DH: <b>15-4-14-5-7</b> => Dire: Quinté+ 12 DH 5 chevaux désordre : 15-4-14-5-7</p>
+        <p>Surprise 12 DH: <b>15-6-12-8-18</b></p>
+        <p>Total 24 DH/jour</p>
+      </div>
+      <p style={{marginTop:20}}><a href='https://www.facebook.com/share/1EHp9RfZmf/' style={{color:'#d4af37'}}>Ma page Facebook</a></p>
+    </div>
+  )
+}
